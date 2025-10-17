@@ -1,0 +1,83 @@
+
+.header_outer_container {
+    background-color: #141414; 
+    color: white;
+    padding: 0 4%; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/*
+  Inner container to manage content width and spacing
+*/
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px; /* Standard Netflix header height */
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+/*
+  Styles for the navigation links section
+*/
+.header_left ul {
+    display: flex;
+    align-items: center;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.header_left li {
+    margin-right: 20px; /* Spacing between navigation links */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+/* Specific style for the Netflix logo image inside the list */
+.header_left li:first-child {
+    margin-right: 30px; /* Extra spacing after the logo */
+}
+
+.header_left li:hover {
+    color: #b3b3b3; /* Lighter color on hover */
+}
+
+/* Current or active link style (if applicable, though not strictly visible in the provided image) */
+.header_left li:nth-child(2) {
+    font-weight: 700; /* Bolder for 'Home' or active link */
+    color: white; /* Ensure active link is bright white */
+}
+
+/*
+  Styles for the right-hand icons section
+*/
+.header_right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header_right li {
+    margin-left: 20px; /* Spacing between icons */
+    cursor: pointer;
+    font-size: 1.2rem; /* Size for icons */
+    transition: color 0.3s ease;
+}
+
+.header_right li:hover {
+    color: #b3b3b3;
+}
+
+/* Style for the icons themselves (assuming they are SVG components) */
+.header_right li svg {
+    display: block; /* Helps with alignment */
+}
