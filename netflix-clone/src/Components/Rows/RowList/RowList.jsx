@@ -4,7 +4,9 @@ import requests from '../../../utils/request'
 
 const RowList = () => {
   return (
-    <div>
+  <div className='alert-section top-50'>
+
+    <div className="container">
       <SingleRow
         title={"NETFLIX ORGINALS"}
         fetchurl={requests.fetchNetflixOriginals}
@@ -45,6 +47,7 @@ const RowList = () => {
         isLargeRow={true}
         fetchurl={requests.fetchDocumentaries}
       />
+    </div>
     </div>
   );
 }

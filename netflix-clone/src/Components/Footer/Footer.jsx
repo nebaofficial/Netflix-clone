@@ -5,15 +5,15 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 const Footer = () => {
   return (
-    <div className='footer_outer_container'>
-      <div className='footer_container'>
-        <div className='footer_icons'>
+    <div className="footer_outer_container">
+      <div className="footer_container">
+        <div className="footer_icons  row ">
           <InstagramIcon />
           <FacebookOutlinedIcon />
           <YouTubeIcon />
         </div>
-        <div className='footer_data'>
-          <div>
+        <div className="footer_data  row ">
+          <div className="col-sm-12 col-md">
             <ul>
               <li>Audio and Subtitles</li>
               <li>Audio Description</li>
@@ -23,36 +23,33 @@ const Footer = () => {
               <li>Investor Relations</li>
             </ul>
           </div>
-          <div>
+          <div className="col-sm-12 col-md">
             <ul>
               <li>Terms of Use</li>
               <li>Privacy</li>
               <li>Cookie Preferences</li>
               <li>Corporate Information</li>
             </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Netflix Originals</li>
-                <li>Contact Us</li>
-                <li>Speed Test</li>
-                <li>Legal Notices</li>
-                <li>Only on Netflix</li>
-
-              </ul>
-            </div>
-           <div>
-            <button className='footer_button'>Service Code</button>
-            
-           </div>
-            <div className='footer_copyright'>
-              <p>© 1997-2024 Netflix, Inc.</p>
-            </div>
+          </div>
+          <div className="col-sm-12 col-md">
+            <ul>
+              <li>Netflix Originals</li>
+              <li>Contact Us</li>
+              <li>Speed Test</li>
+              <li>Legal Notices</li>
+              <li>Only on Netflix</li>
+            </ul>
+          </div>
+          <div>
+            <button className="footer_button row ">Service Code</button>
+          </div>
+          <div className="copyright row col-sm-12 order-2 col-md-8 order-md-1 col-lg-4 order-lg-1">
+            <p>© 1997-2024 Netflix, Inc.</p>
           </div>
         </div>
       </div>
-   
-  )
+    </div>
+  );
 }
 
 export default Footer
