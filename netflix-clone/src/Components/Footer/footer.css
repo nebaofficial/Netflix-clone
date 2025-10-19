@@ -1,10 +1,10 @@
 
-/* .footer_outer_container{
+.footer_outer_container{
  
  
     color: gray;
 
-} */
+}
 .footer_container
 {
 max-width: 90%;
@@ -60,14 +60,13 @@ flex-direction: column;
 
   padding-right: 20px;
   padding-left: 20px;
-
   text-align: center;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+    position: fixed;
+  /* bottom: 0px; */
+  /* width: 100%; */
   height: 0px;
-
   color: white;
+  margin-top: 5px;
 
 }
 

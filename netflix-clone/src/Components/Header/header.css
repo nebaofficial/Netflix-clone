@@ -2,13 +2,13 @@
 .header_outer_container {
     background-color: #141414; 
     color: white;
-    padding: 0 4%; 
+    /* padding: 0 4%;  */
     position: sticky;
-    top: 0;
+    /* top: 0; */
     left: 0;
     right: 0;
-    z-index: 100; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);  */
 }
 
 /*
@@ -20,7 +20,9 @@
     align-items: center;
     height: 68px; /* Standard Netflix header height */
     font-size: 0.9rem; /* Slightly smaller text */
+
 }
+
 
 /*
   Styles for the navigation links section
