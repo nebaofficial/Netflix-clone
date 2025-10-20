@@ -19,12 +19,13 @@ const Header = () => {
                 data-target=".navbar-collapse"
               >
                 ☰
-              </button>
+              </button> 
+              <a className="navbar-brand mx-auto">
+                <img src={Netflix} alt="Neflix" width="100" />
+              </a>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav nav-justified w-100 nav-fill">
-              <li className="navbar-brand mx-auto">
-                <img src={Netflix} alt="Neflix" width="100" />
-              </li>
+             
               <li className="nav-item">
                 <a className="nav-link js-scroll-trigger">Home</a>
               </li>

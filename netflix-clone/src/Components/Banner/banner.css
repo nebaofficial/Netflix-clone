@@ -89,3 +89,33 @@
     background-color: #e6e6e6;
     transition: all 0.2s;
 }
+@media (max-width:768px){
+    .banner_contents{
+        width: 90%;
+    }
+    .banner_title{
+        font-size: 2rem;
+    }
+    .banner_description{
+        font-size: 0.8rem;
+    }
+    .banner_buttons{
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .banner_contents{
+        width: 70%;
+    }
+    .banner_title{
+        font-size: 2.5rem;
+    }
+    .banner_description{
+        font-size: 0.9rem;
+    }
+    .banner_buttons{
+        font-size: 0.9rem;
+        padding: 9px 18px;
+    }
+}
