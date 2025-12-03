@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 .row_posters::-webkit-scrollbar {
-    display: none;
+    display:none;
 }
 .row{
     color: white;
