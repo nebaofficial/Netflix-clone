@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './singleRow.css';
 import axios from '../../../utils/axios';
+import placeholderImg from '../../../assets/images/Neflix.png';
 import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
 
@@ -57,15 +58,24 @@ const SingleRow = ({ title, fetchurl, isLargeRow }) => {
     <div>
       <h2>{title}</h2>
       <div className="row_posters">
-        {movies.map((movie, index) => (
-          <img
-            onClick={() => handleClick(movie)}
-            key={index}
-            className={`row_poster ${isLargeRow && 'row_posterLarge'}`}
-            src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-            alt={movie.name}
-          />
-        ))}
+        {movies.map((movie) => {
+          const imgPath = (isLargeRow ? movie.poster_path : movie.backdrop_path) || movie.poster_path || movie.backdrop_path;
+          const src = imgPath ? `${base_url}${imgPath}` : placeholderImg;
+          const altText = movie.title || movie.name || movie.original_name || 'movie poster';
+          return (
+            <img
+              onClick={() => handleClick(movie)}
+              key={movie.id || movie.key || altText}
+              className={`row_poster ${isLargeRow && 'row_posterLarge'}`}
+              src={src}
+              alt={altText}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = placeholderImg;
+              }}
+            />
+          );
+        })}
       </div>
       <div style={{ padding: '40px' }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
